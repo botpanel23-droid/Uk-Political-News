@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK Political News</title>
+
+<style>
+
+/* BASIC RESET */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif; }
+body { background: #f0f4f8; color:#111; overflow-x:hidden; }
+
+/* HEADER */
+header {
+  background:#0d1b3a;
+  color:white;
+  padding:18px 30px;
+  position:sticky;
+  top:0; z-index:999;
+}
+header h1 {
+  font-size:24px;
+  letter-spacing:1px;
+}
+header nav a {
+  color:white; text-decoration:none; margin:0 12px;
+  font-size:16px; opacity:0.8;
+  transition:0.3s;
+}
+header nav a:hover {
+  opacity:1;
+  transform:scale(1.1);
+}
+
+/* MAIN */
+.main-content { padding:30px; }
+
+/* NEWS CARD */
+.news-grid {
+  display:grid;
+  gap:22px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+.news-card {
+  background:white;
+  padding:18px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  transition:0.4s;
+  position:relative;
+}
+.news-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,0.12);
+}
+
+.news-card h3 {
+  font-size:18px;
+  margin-bottom:12px;
+  color:#0d1b3a;
+}
+.news-card p {
+  font-size:14px;
+  line-height:1.5;
+  margin-bottom:10px;
+}
+.news-card a {
+  display:inline-block;
+  margin-top:12px;
+  background:#0d1b3a;
+  color:white;
+  padding:10px 14px;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+.news-card a:hover {
+  background:#0f2d65;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(12px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.news-card {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:12px;
+  font-size:14px;
+  color:#555;
+  margin-top:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>🇬🇧 UK Political News</h1>
+  <nav>
+    <a href="#latest">Latest</a>
+    <a href="#issues">Issues</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+  <section id="latest">
+    <h2 style="margin-bottom:14px; color:#0d1b3a;">Latest News</h2>
+    <div class="news-grid">
+
+      <!-- NEWS CARD TEMPLATE -->
+      <div class="news-card">
+        <h3>UK Election Update</h3>
+        <p>The next general election is scheduled … (brief summary)…</p>
+        <a href="https://otieu.com/4/10480210" target="_blank">Read More</a>
+      </div>
+
+      <div class="news-card">
+        <h3>New Policy Announcement</h3>
+        <p>The government announced a new policy on … (short)…</p>
+        <a href="https://otieu.com/4/10478226" target="_blank">Read More</a>
+      </div>
+
+      <div class="news-card">
+        <h3>Parliament Debate Highlights</h3>
+        <p>Latest highlights from debates in parliament …</p>
+        <a href="https://otieu.com/4/10584084" target="_blank">Read More</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 UK Political News. All Rights Reserved.
+  </footer>
+
+</div>
+
+</body>
+</html>
